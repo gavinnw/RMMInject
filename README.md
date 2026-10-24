@@ -1,19 +1,13 @@
 
 # RMMInject
 
-**RMMInject** (Roblox Manual Map Injector) is a robust manual-mapping injection method for Roblox, developed to bypass the AMDXX64.dll patch. It provides a seamless and efficient way to inject DLLs into Roblox. **RMMInject** is open-source and written in C++.
-
----
-
-**UPDATE!**
-
-With the latest hyperion update adding CFG memory protection, RMMInject isn't working. You can either wait for the new version (releasing tommorow), or quickly upgrade your base to make it work now!
+**RMMInject** (Manual Map Injector) is a robust manual-mapping injection method for debigging, It provides a seamless and efficient way to inject DLLs into apps for debugging. **RMMInject** is open-source and written in C++.
 
 ---
 
 ### ⚠️ **Troubleshooting**
 
-If Roblox crashes after injection, it's likely due to incorrect offsets for the following parameters:
+If your app crashes after injection, it's likely due to incorrect offsets for the following parameters:
 
 - `SCF_INSERTED_JMP`
 - `SCF_END_MARKER`
@@ -43,7 +37,6 @@ namespace Offsets
     constexpr uint64_t kPageMask = 0xfffffffffffff000;
     constexpr uint8_t kPageShift = 0xc;
 
-    // These offsets change every update be warned!
     constexpr uint64_t kPageHash = 0x84B3A57D90E73527;
     constexpr uint64_t Offset_InsertSet = 0xC43D00;
     constexpr uint64_t Offset_WhitelistedPages = 0x29C758;
